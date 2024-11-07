@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme de Fidélité | Retour de Bouteilles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="65cb2e87fe2f9f4c99ce0b5f_LOGO_LATOURNEE.png" alt="La Tournée" class="logo">
+            <h1>Programme de Fidélité</h1>
+            <p>Gagnez des points de fidélité en rendant vos bouteilles !</p>
+        </header>
+
+        <section class="loyalty-system">
+            <h2>Votre Solde de Points</h2>
+            <div class="points-display">
+                <span id="points-count">0</span> points
+            </div>
+            <label for="bottle-count">Nombre de Bouteilles :</label>
+            <input type="number" id="bottle-count" placeholder="Entrez le nombre" min="1">
+            <button onclick="ajouterPoints()">Valider le Retour</button>
+        </section>
+    </div>
+
+    <!-- Pop-up pour les points de fidélité -->
+    <div id="points-popup" class="popup hidden">
+        <div class="popup-content">
+            <img src="65cb2e87fe2f9f4c99ce0b5f_LOGO_LATOURNEE.png" alt="La Tournée" class="logo">
+            <span class="close-btn" onclick="fermerPopup()">&times;</span>
+            <h2>Merci pour votre geste !</h2>
+            <p>Vous avez gagné <span id="earned-points"></span> points de fidélité.</p>
+            <img src="Capture d'écran 2024-11-07 132953.png" style="margin-top: 2rem;" alt="La Tournée" class="logo">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
